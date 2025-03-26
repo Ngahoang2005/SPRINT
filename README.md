@@ -14,40 +14,25 @@
 </div>
 
 
+<!-- Center the text -->
+<div align="center">
 
 ***Accepted at ICDAR 2024 Conference***
+
+</div>
 
 1. The Repository contains code and details regarding the SPRINT model
 2. The trained models are readily available for inference and testing in the releases section - [link](https://github.com/IITB-LEAP-OCR/SPRINT/releases/tag/models)
 3. The Details regarding the results are described through the readme
 
-*Details of Paper, Code, and Training details will be updated soon*
+![SPRINT Teaser Figure](./resources/teaser_figure.png "SPRINT Teaser Figure")
+
+
 
 ## Abstract
 
 Table Structure Recognition (TSR) is vital for various downstream tasks like information retrieval, table reconstruction, and document understanding. While most state-of-the-art (SOTA) research predominantly focuses on TSR in English documents, the need for similar capabilities in other languages is evident, considering the global diversity of data. Moreover, creating substantial labeled data in non-English languages and training these SOTA models from scratch is costly and time-consuming. We propose TSR as a language-agnostic cell arrangement prediction and introduce **SPRINT** — Script-agnostic Structure Recognition in Tables. **SPRINT** uses recently introduced Optimized Table Structure Language (OTSL) sequences to predict table structures. We show that when coupled with a pretrained table grid estimator, **SPRINT** can improve the overall tree edit distance-based similarity structure (TEDS-S) scores of tables even for non-English documents. We experimentally evaluate our performance across benchmark TSR datasets including PubTabNet, FinTabNet, and PubTables-1M. Our findings reveal that **SPRINT** not only matches SOTA models in performance on standard datasets but also demonstrates lower latency. Additionally, **SPRINT** excels in accurately identifying table structures in non-English documents, surpassing current leading models by showing an absolute average increase of 11.12\%. To encourage further research, we release our code and  Multilingual Scanned and Scene Table Structure Recognition Dataset, (**MUSTARD**) labeled with OTSL sequences for $1428$ tables in thirteen languages encompassing several scripts. Additionally, we also present an algorithm for converting valid OTSL sequences into a widely used HTML-based table representation.
 
-
-
-## Citation
-
-If you use this paper or the accompanying code/data in your research, please cite it as:
-
-```
-@InProceedings{10.1007/978-3-031-70549-6_21,
-author="Kudale, Dhruv and Kasuba, Badri Vishal and Subramanian, Venkatapathy and Chaudhuri, Parag and Ramakrishnan, Ganesh",
-editor="Barney Smith, Elisa H. and Liwicki, Marcus and Peng, Liangrui",
-title="SPRINT: Script-agnostic Structure Recognition in Tables",
-booktitle="Document Analysis and Recognition - ICDAR 2024",
-year="2024",
-publisher="Springer Nature Switzerland",
-address="Cham",
-pages="350--367",
-isbn="978-3-031-70549-6"
-url = "https://arxiv.org/abs/2503.11932"
-}
-
-```
 
 
 # Getting Started
@@ -122,6 +107,7 @@ MUSTARD dataset has been curated from various magazines and  contains both print
 
 ![results](./resources/qualitative_figure.png "results")
 
+
 # References
 
 1. [MASTER paper](https://arxiv.org/abs/1910.02562 "MASTER paper")
@@ -147,3 +133,24 @@ Translation Mission-Bhashini project.
 # Questions or Issues
 
 we conclude with opening doors to more innovative contributions bringing about seamless script-agnostic Table Structure Recognition. Thank you for your interest in our research paper
+
+
+# Citation
+
+If you use this paper or the accompanying code/data in your research, please cite it as:
+
+```
+@InProceedings{10.1007/978-3-031-70549-6_21,
+author="Kudale, Dhruv and Kasuba, Badri Vishal and Subramanian, Venkatapathy and Chaudhuri, Parag and Ramakrishnan, Ganesh",
+editor="Barney Smith, Elisa H. and Liwicki, Marcus and Peng, Liangrui",
+title="SPRINT: Script-agnostic Structure Recognition in Tables",
+booktitle="Document Analysis and Recognition - ICDAR 2024",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="350--367",
+isbn="978-3-031-70549-6"
+url = "https://arxiv.org/abs/2503.11932"
+}
+
+```
