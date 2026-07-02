@@ -1,5 +1,5 @@
-IMAGES_DIR = './../data/mustard/indic/assamese/test/'
+IMAGES_DIR = './data/MUSTARD/testset/indic/hindi/'
 DEVICE = '0'
-MODEL_PATH = './../models/SPRINT_FINTABNET.pt'
+MODEL_PATH = './models/SPRINT_fintabnet.pt'
 BATCH_SIZE = 32
 RESULTS_FILE = './../results.json'
