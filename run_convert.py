@@ -1,20 +1,24 @@
 import json
+import os
 from src.otsl_to_htlml import convert_to_html
 
-# Mở file kết quả suy luận
-with open('/home/s24gbn1/Documents/httn/SPRINT/src/results.json', 'r') as f:
-    results = json.load(f)
+# Đường dẫn file json (bây giờ nó đã ở thư mục gốc SPRINT)
+json_file = 'results.json'
+
+if not os.path.exists(json_file):
+    print(f"Lỗi: Không tìm thấy file {json_file}")
+    exit()
+
+with open(json_file, 'r') as f:
     results = json.load(f)
 
-# Tạo thư mục chứa file HTML nếu chưa có
-import os
-os.makedirs('output_html', exist_ok=True)
+# Tạo thư mục đầu ra
+if not os.path.exists('output_html'):
+    os.makedirs('output_html')
 
 for filename, otsl_str in results.items():
-    # Lưu ý: Các file trong MUSTARD có kích thước khác nhau. 
-    # Cần R và C để align chính xác. Nếu không biết, hãy để R, C mặc định (ví dụ 10, 5)
-    # hoặc phải lấy từ dữ liệu thực tế.
     try:
+        # Chuyển đổi (R=10, C=5 là giả định, bạn có thể điều chỉnh)
         html_code = convert_to_html(otsl_str, R=10, C=5)
         out_name = filename.replace('.png', '.html')
         with open(f"output_html/{out_name}", "w") as f:
