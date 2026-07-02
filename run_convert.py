@@ -2,7 +2,8 @@ import json
 from src.otsl_to_htlml import convert_to_html
 
 # Mở file kết quả suy luận
-with open('results.json', 'r') as f:
+with open('/home/s24gbn1/Documents/httn/SPRINT/src/results.json', 'r') as f:
+    results = json.load(f)
     results = json.load(f)
 
 # Tạo thư mục chứa file HTML nếu chưa có
